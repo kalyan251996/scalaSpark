@@ -16,7 +16,6 @@ object datframe1
                 .getOrCreate()
     val df =spark.read.format("csv").option("path","D:/data/txns_head").option("header",true).load()
     df.show(10)
-    df.printSchema()
    }
 
 }

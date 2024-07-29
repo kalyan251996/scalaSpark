@@ -12,8 +12,6 @@ object dataframemq1 {
     val df =inventory.withColumn("stock_level",when(col("quantity")<10,"low").when(col("quantity")<20
       &&col("quantity")>10,"Medium").otherwise("High"))
       df.show()
-    df.printSchema()
-
   }
 
 }

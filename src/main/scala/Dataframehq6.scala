@@ -14,7 +14,7 @@ object Dataframehq6 {
     val df =weather.withColumn("is_hot",when(col("temperature")>30,true).otherwise(false))
                     .withColumn("is_humid",when(col("temperature")<30, true).otherwise(false))
     df.show()
-    df.printSchema()
+
 
   }
 

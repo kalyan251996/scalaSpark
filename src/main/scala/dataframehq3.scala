@@ -15,7 +15,7 @@ object dataframehq3 {
     val df =documents.withColumn("Doc_details",when(col("content").contains("fox"),"Animal Related")
       .when(col("content").contains("Lorem"),"Placeholder Text").otherwise("Tech Related"))
     df.show(false)
-    df.printSchema()
+
   }
 
 }

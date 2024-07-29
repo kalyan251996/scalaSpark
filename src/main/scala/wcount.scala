@@ -1,7 +1,6 @@
 import org.apache.spark.SparkContext
 object wcount {
     def main(args: Array[String]): Unit = {
-      //WordCount Programme
       val sc = new SparkContext("local[*]", "kalyan")
       val rdd1 = sc.textFile("D:/data/ipadd.txt")
       val rdd2 = rdd1.flatMap(x => x.split("/"))

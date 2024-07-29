@@ -11,5 +11,6 @@ object datframehq8 {
     val df =customers.withColumn("Email_provider",when(col("email").contains("gmail"),"Gmail").
       when(col("email").contains("yahoo"),"yahoo").otherwise("Hotmail"))
     df.show()
+    df.printSchema()
 }
   }

@@ -15,5 +15,6 @@ object dataframeQ1 {
       (3, "Doe", 22)).toDF("id", "name", "age")
    val emp1 =employees.withColumn("Details",when(col("age")>=18,"Adult").otherwise("false"))
     emp1.show()
+    emp1.printSchema()
  }
 }

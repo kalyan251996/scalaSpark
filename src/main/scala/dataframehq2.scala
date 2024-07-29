@@ -12,7 +12,6 @@ object  dataframehq2 {
     val df =reviews.withColumn("ReviewCat",when(col("rating")<3,"Bad").when(col("rating")<=4 && col("rating")>=3,"Good")
     .otherwise("Excellent"))
     df.show()
-    df.printSchema()
   }
 
 }

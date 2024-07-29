@@ -5,7 +5,6 @@ import org.apache.spark.sql.{SaveMode, SparkSession}
 
 object todfexaam {
   def main(args:Array[String]):Unit={
-    //Full Dataframe Concepts
     val spark=SparkSession.builder().appName("toDf_example").master("local[*]").getOrCreate()
     val df5=spark.read.format("csv").option("header",true).option("path","D:/data/transact.txt").load()
     val df6 =df5.withColumn("ammount_info",when(col("amount")>1000,"high").

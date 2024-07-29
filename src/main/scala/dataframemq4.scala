@@ -15,7 +15,6 @@ object dataframemq4 {
     val df =sales.withColumn("DiscountDetails", when(col("amount")<200,0).when(col("amount")<1000 &&col("amount")>200,10)
       .otherwise(20))
     df.show()
-    df.printSchema()
   }
 }
 

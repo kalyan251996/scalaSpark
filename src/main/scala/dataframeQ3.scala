@@ -13,7 +13,6 @@ val spark =SparkSession.builder().appName("TransactionGroup").master("local[*]")
     val df= transaction.withColumn("Category",when(col("amount")> 1000,"High").
                 when(col("amount")>50 && col("amount")<1000,"Medium").otherwise("Low"))
     df.show()
-    df.printSchema()
 
   }
 
