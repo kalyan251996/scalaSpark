@@ -13,6 +13,7 @@ object dataframeQ1 {
       (1, "John", 28),
       (2, "Jane", 35),
       (3, "Doe", 22)).toDF("id", "name", "age")
-   val emp1 =employees.withColumn("Details",when(col("age")>=18,"Adult").otherwise("false")).show()
+   val emp1 =employees.withColumn("Details",when(col("age")>=18,"Adult").otherwise("false"))
+    emp1.show()
  }
 }

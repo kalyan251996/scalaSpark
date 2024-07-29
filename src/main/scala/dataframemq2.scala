@@ -12,6 +12,7 @@ object dataframemq2 {
       when(col("email").contains("yahoo"),"yahoo").otherwise("Hotmail"))
 
     df.show()
+    df.printSchema()
   }
 
 }

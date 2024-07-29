@@ -2,7 +2,7 @@ import org.apache.spark.SparkContext
 object rddjoin {
   def main(args:Array[String]):Unit={
 
-
+//searchTerm in rdd
     val sc= new SparkContext("local[*]","rdd_join")
     val data1 =sc.parallelize(Array(("apple"),("bananna"),("Orange")))
     val searchterm="an"

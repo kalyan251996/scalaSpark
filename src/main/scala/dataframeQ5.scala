@@ -11,5 +11,6 @@ def main(args:Array[String]):Unit={
   val holiday =events.withColumn("Holiday",when(col("date").isin("2024-12-25","2025-01-01"),true )
                 .otherwise(false))
     holiday.show()
+  holiday.printSchema()
 }
 }

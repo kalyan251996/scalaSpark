@@ -5,7 +5,7 @@ import org.apache.spark.sql.{SaveMode, SparkSession}
 
 object scema {
   def main(args: Array[String]): Unit = {
-
+//in-Built Schema
     val spark=SparkSession.builder()
       .appName("spark-program")
       .master("local[*]")

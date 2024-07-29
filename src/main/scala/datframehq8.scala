@@ -10,6 +10,6 @@ object datframehq8 {
     val customers=List((1,"user@gmail.com"),(2,"admin@yahoo.com"),(3,"info@hotmail.com")).toDF("customer_id","email")
     val df =customers.withColumn("Email_provider",when(col("email").contains("gmail"),"Gmail").
       when(col("email").contains("yahoo"),"yahoo").otherwise("Hotmail"))
-
+    df.show()
 }
   }

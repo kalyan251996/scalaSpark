@@ -4,7 +4,7 @@ import org.apache.spark.sql.functions.{col, when}
 import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
 import org.apache.spark.sql.{SaveMode, SparkSession}
 
-object dataframehq2 {
+object  dataframehq2 {
   def main(args:Array[String]):Unit={
     val spark =SparkSession.builder().appName("review Def").master("local[*]").getOrCreate()
     import spark.implicits._
@@ -12,6 +12,7 @@ object dataframehq2 {
     val df =reviews.withColumn("ReviewCat",when(col("rating")<3,"Bad").when(col("rating")<=4 && col("rating")>=3,"Good")
     .otherwise("Excellent"))
     df.show()
+    df.printSchema()
   }
 
 }

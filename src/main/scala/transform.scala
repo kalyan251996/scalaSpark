@@ -5,6 +5,7 @@ import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructT
 import org.apache.spark.sql.{SaveMode, SparkSession}
 object transform {
   def main(args:Array[String]):Unit={
+    //Transformations Rdd's
     val spark =SparkSession.builder().appName("transformation").master("local[*]").getOrCreate()
     val schema=StructType(List(
 

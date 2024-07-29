@@ -15,6 +15,7 @@ object datframehq1 {
       when(col("age")> 30 && col("age")<40 && col("salary")>350000 || col("salary")<40000,"medium & Medium Salary")
       .when(col("age")>40  && col("salary")>40000 || col("salary")<40000,"OLD AND HIGH Salary"))
     df1.show(false)
+      df1.printSchema()
   }
 
 }

@@ -17,6 +17,7 @@ object datframehq7 {
                   .withColumn("English_Grade",when(col("english_score")>80,"A")
                                           .when(col("english_score")<80 &&col("english_score")>60 ,"B").otherwise("C"))
     df.show()
+    df.printSchema()
 
   }
 

@@ -15,5 +15,6 @@ def main(args:Array[String]):Unit={
   val df =orders.withColumn("order_type",when(col("quantity")<10 && col("total_price")<200,"Small & Cheap" )
   .when(col("quantity")>=10 && col("total_price")<200 ,"Bulk & Discount").otherwise("Premium Order"))
   df.show()
+  df.printSchema()
 }
 }

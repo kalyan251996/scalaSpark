@@ -12,5 +12,7 @@ def main(args:Array[String]):Unit={
   val df =products.withColumn("Product_cat",when(col("price")<50,"Cheap")
           .when(col("price")>50 && col("price")<100,"Moderate").otherwise("Expensive"))
   df.show()
+  df.printSchema()
+
 }
 }

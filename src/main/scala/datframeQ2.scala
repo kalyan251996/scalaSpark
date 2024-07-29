@@ -14,6 +14,7 @@ object datframeQ2 {
       (3, 73)).toDF("student_id", "score")
     val df =grades.withColumn("Grade",when(col("score")>=50,"Pass" ).otherwise("Fail"))
     df.show()
+    df.printSchema()
 
   }
 
