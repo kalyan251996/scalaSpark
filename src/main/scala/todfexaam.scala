@@ -1,4 +1,4 @@
-import org.apache.spark.sql.functions.{col,when,avg,sum,max,count}
+import org.apache.spark.sql.functions.{col,when,avg,sum,max,count,min}
 import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
 import org.apache.spark.sql.{SaveMode, SparkSession}
 
@@ -10,7 +10,7 @@ object todfexaam {
     val df6 =df5.withColumn("ammount_info",when(col("amount")>1000,"high").
       when(col("amount")<1000 && col("amount")>500,"high").otherwise("low"))
     df6.show()
-    import spark.implicits._
+   import spark.implicits._
     val dataframe=List(("mohan",28),("Mahi",78)).toDF("Name","Age")
         dataframe.show()
     val employees = List(
